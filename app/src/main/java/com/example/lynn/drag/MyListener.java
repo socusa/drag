@@ -18,7 +18,7 @@ public class MyListener implements View.OnTouchListener {
             offsetY = motionEvent.getRawY() - layoutParams.topMargin;
         } else if (motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
             layoutParams.leftMargin = (int)(motionEvent.getRawX() - offsetX);
-            layoutParams.rightMargin = (int)(motionEvent.getRawY() - offsetY);
+            layoutParams.topMargin = (int)(motionEvent.getRawY() - offsetY);
 
             view.setLayoutParams(layoutParams);
 
