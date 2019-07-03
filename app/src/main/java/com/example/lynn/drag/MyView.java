@@ -38,6 +38,30 @@ public class MyView extends RelativeLayout {
         height = point.y;
 
         addView(message);
+
+        RelativeLayout layout1 = new RelativeLayout(context);
+
+        layoutParams = new LayoutParams(width,2*(height-200)/3);
+
+        layout1.setId(generateViewId());
+
+        layout1.setLayoutParams(layoutParams);
+
+        layout1.setBackgroundColor(0xFF8F0000);
+
+        addView(layout1);
+
+        RelativeLayout layout2 = new RelativeLayout(context);
+
+        layoutParams = new LayoutParams(width,(height-200)/3);
+
+        layoutParams.addRule(BELOW,layout1.getId());
+
+        layout2.setLayoutParams(layoutParams);
+
+        layout2.setBackgroundColor(0xFF00008F);
+
+        addView(layout2);
     }
 
 }
