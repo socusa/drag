@@ -5,6 +5,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import static com.example.lynn.drag.MainActivity.button;
+import static com.example.lynn.drag.MainActivity.height;
+import static com.example.lynn.drag.MainActivity.message;
+import static com.example.lynn.drag.MainActivity.width;
+
 public class MyListener implements View.OnTouchListener {
     private float offsetX;
     private float offsetY;
@@ -25,6 +30,8 @@ public class MyListener implements View.OnTouchListener {
             Button button = (Button)view;
 
             button.setText("(" + layoutParams.leftMargin + "," + layoutParams.topMargin + ")");
+
+            message.setText(width + " " + height + " " + (height - ((RelativeLayout.LayoutParams)(button.getLayoutParams())).topMargin));
         }
 
         return (true);
