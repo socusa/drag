@@ -41,7 +41,7 @@ public class MyView extends RelativeLayout {
 
         RelativeLayout layout1 = new RelativeLayout(context);
 
-        layoutParams = new LayoutParams(width,2*(height-210)/3);
+        layoutParams = new LayoutParams(width,2*(height-220)/3);
 
         layout1.setId(generateViewId());
 
@@ -53,7 +53,7 @@ public class MyView extends RelativeLayout {
 
         RelativeLayout layout2 = new RelativeLayout(context);
 
-        layoutParams = new LayoutParams(width,(height-210)/3);
+        layoutParams = new LayoutParams(width,(height-220)/3);
 
         layoutParams.addRule(BELOW,layout1.getId());
 
