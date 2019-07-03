@@ -37,7 +37,7 @@ public class MyView extends RelativeLayout {
         width = point.x;
         height = point.y;
 
-        message.setText(width + " " + height);
+        message.setText(width + " " + height + " " + (height - ((LayoutParams)(button.getLayoutParams())).topMargin));
 
         addView(message);
     }
