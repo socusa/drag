@@ -24,10 +24,6 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
 
             view.setLayoutParams(layoutParams);
 
-            Button button = (Button)view;
-
-            button.setText("(" + layoutParams.leftMargin + "," + layoutParams.topMargin + ")");
-
             message.setText(width + " " + height + " " + (height - ((RelativeLayout.LayoutParams)(button.getLayoutParams())).topMargin));
         }
 
