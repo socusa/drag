@@ -42,7 +42,7 @@ public class MyThread implements Runnable {
             }
 
             distancex = (left) ? -50 : 50;
-            distancey = (up) ? -50 : 50;
+            distancey = (up) ? 50 : -50;
 
 
 
