@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public static TextView message;
     public static Point center;
     public static boolean left = true;
+    public static boolean up = true;
     public static MyThread myThread;
 
     @Override

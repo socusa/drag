@@ -33,6 +33,19 @@ public class MyThread implements Runnable {
     @Override
     public void run() {
         while (keepGoing) {
+            int distancex = 0;
+            int distancey = 0;
+
+            if (center.x < 50) {
+                left = false;
+                up = false;
+            }
+
+            distancex = (left) ? -10 : 10;
+            distancey = (up) ? -10 : 10;
+
+
+
             if (left) {
                 center.x -= 10;
                 center.y -= 10;
