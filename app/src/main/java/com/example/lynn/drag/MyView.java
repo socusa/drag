@@ -79,6 +79,9 @@ public class MyView extends RelativeLayout {
         layout2.setBackgroundColor(0xFF000000);
 
         addView(layout2);
+
+        layout1.setOnTouchListener(listener);
+        layout2.setOnTouchListener(listener);
     }
 
     public void onDraw(Canvas canvas) {

@@ -16,10 +16,10 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)view.getLayoutParams();
 
         if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-            offsetX = motionEvent.getRawX() - layoutParams.leftMargin;
+        //    offsetX = motionEvent.getRawX() - layoutParams.leftMargin;
             offsetY = motionEvent.getRawY() - layoutParams.topMargin;
         } else if (motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
-            layoutParams.leftMargin = (int)(motionEvent.getRawX() - offsetX);
+         //   layoutParams.leftMargin = (int)(motionEvent.getRawX() - offsetX);
             layoutParams.topMargin = (int)(motionEvent.getRawY() - offsetY);
 
             view.setLayoutParams(layoutParams);
