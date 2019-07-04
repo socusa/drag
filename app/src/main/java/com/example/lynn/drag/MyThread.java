@@ -36,14 +36,14 @@ public class MyThread implements Runnable {
             int distancex = 0;
             int distancey = 0;
 
-            if (center.y < 50) {
+            if (center.y < 50)
                 up = false;
-            }
+
+            if (center.y > height-170)
+                up = true;
 
             distancex = (left) ? 50 : -50;
             distancey = (up) ? 50 : -50;
-
-
 
             if (left) {
                 center.x -= distancex;

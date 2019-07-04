@@ -54,7 +54,7 @@ public class MyView extends RelativeLayout {
 
         myThread = new MyThread();
 
-        RelativeLayout layout1 = new RelativeLayout(context);
+        layout1 = new RelativeLayout(context);
 
         layoutParams = new LayoutParams(50,400);
 
@@ -67,7 +67,7 @@ public class MyView extends RelativeLayout {
 
         addView(layout1);
 
-        RelativeLayout layout2 = new RelativeLayout(context);
+        layout2 = new RelativeLayout(context);
 
         layoutParams = new LayoutParams(50,400);
 

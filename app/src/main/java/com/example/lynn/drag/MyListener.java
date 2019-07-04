@@ -24,6 +24,12 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
 
             view.setLayoutParams(layoutParams);
 
+            RelativeLayout.LayoutParams layoutParamsLeft = (RelativeLayout.LayoutParams)layout1.getLayoutParams();
+            RelativeLayout.LayoutParams layoutParamsRight = (RelativeLayout.LayoutParams)layout2.getLayoutParams();
+
+            rangeLeft = new Range(layoutParamsLeft.topMargin,layoutParamsLeft.topMargin + 400);
+            rangeRight = new Range(layoutParamsRight.topMargin,layoutParamsRight.topMargin + 400);
+
             message.setText(width + " " + height + " " + (height - ((RelativeLayout.LayoutParams)(button.getLayoutParams())).topMargin));
         }
 
