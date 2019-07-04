@@ -47,8 +47,8 @@ public class MyThread implements Runnable {
 
 
             if (left) {
-                center.x -= 10;
-                center.y -= 10;
+                center.x -= distancex;
+                center.y -= distancey;
 
                 myView.post(new Runnable() {
 
@@ -59,7 +59,7 @@ public class MyThread implements Runnable {
 
                 });
 
-                pause(0.5);
+                pause(0.1);
             }
 
         }
