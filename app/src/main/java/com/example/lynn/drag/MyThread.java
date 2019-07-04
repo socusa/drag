@@ -42,6 +42,12 @@ public class MyThread implements Runnable {
             if (center.y > height-170)
                 up = true;
 
+            if (rangeLeft.contains())
+                left = false;
+
+            if (rangeRight.contains())
+                left = true;
+
             distancex = (left) ? 50 : -50;
             distancey = (up) ? 50 : -50;
 
@@ -58,7 +64,7 @@ public class MyThread implements Runnable {
 
                 });
 
-                pause(0.1);
+                pause(0.5);
             }
 
         }
