@@ -59,7 +59,7 @@ public class MyThread implements Runnable {
 
                 });
 
-                pause(1);
+                pause(0.5);
             }
 
         }
