@@ -54,33 +54,31 @@ public class MyView extends RelativeLayout {
 
         myThread = new MyThread();
 
-        /*
-
         RelativeLayout layout1 = new RelativeLayout(context);
 
-        layoutParams = new LayoutParams(width,2*(height-170)/3);
+        layoutParams = new LayoutParams(100,400);
 
-        layout1.setId(generateViewId());
+        layoutParams.leftMargin = 0;
+        layoutParams.topMargin = 0;
 
         layout1.setLayoutParams(layoutParams);
 
-        layout1.setBackgroundColor(0xFF8F0000);
+        layout1.setBackgroundColor(0xFF000000);
 
         addView(layout1);
 
         RelativeLayout layout2 = new RelativeLayout(context);
 
-        layoutParams = new LayoutParams(width,(height-170)/3);
+        layoutParams = new LayoutParams(100,400);
 
-        layoutParams.addRule(BELOW,layout1.getId());
+        layoutParams.leftMargin = width-100;
+        layoutParams.topMargin = 0;
 
         layout2.setLayoutParams(layoutParams);
 
-        layout2.setBackgroundColor(0xFF00008F);
+        layout2.setBackgroundColor(0xFF000000);
 
         addView(layout2);
-
-        */
     }
 
     public void onDraw(Canvas canvas) {
