@@ -18,7 +18,7 @@ public class Range {
                 return (true);
             }
         } else {
-            if (center.y >= start && center.y <= end && center.x + 50 <= width-50) {
+            if (center.y >= start && center.y <= end && center.x + 50 >= width-50) {
                 return (true);
             }
         }
