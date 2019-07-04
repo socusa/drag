@@ -23,7 +23,7 @@ public class MyThread implements Runnable {
     }
 
     public void stop() {
-        keepGoing = true;
+        keepGoing = false;
     }
 
     public boolean getKeepGoing() {
@@ -46,7 +46,7 @@ public class MyThread implements Runnable {
 
                 });
 
-                pause(0.5);
+                pause(1);
             }
 
         }
