@@ -51,22 +51,19 @@ public class MyThread implements Runnable {
             distancex = (left) ? 50 : -50;
             distancey = (up) ? 50 : -50;
 
-            if (left) {
-                center.x -= distancex;
-                center.y -= distancey;
+            center.x -= distancex;
+            center.y -= distancey;
 
-                myView.post(new Runnable() {
+            myView.post(new Runnable() {
 
-                    @Override
-                    public void run() {
-                        myView.invalidate();
-                    }
+                @Override
+                public void run() {
+                    myView.invalidate();
+                }
 
-                });
+            });
 
-                pause(0.5);
-            }
-
+            pause(0.5);
         }
 
 
