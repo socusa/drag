@@ -65,6 +65,8 @@ public class MyView extends RelativeLayout {
 
         layout1.setBackgroundColor(0xFF000000);
 
+        rangeLeft = new Range(layoutParams.topMargin,layoutParams.topMargin + 400);
+
         addView(layout1);
 
         layout2 = new RelativeLayout(context);
@@ -77,6 +79,8 @@ public class MyView extends RelativeLayout {
         layout2.setLayoutParams(layoutParams);
 
         layout2.setBackgroundColor(0xFF000000);
+
+        rangeRight = new Range(layoutParams.topMargin,layoutParams.topMargin + 400);
 
         addView(layout2);
 
