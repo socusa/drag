@@ -40,6 +40,8 @@ public class MyView extends RelativeLayout {
         width = point.x;
         height = point.y;
 
+        center = new Point(width-100,(height-100)/2);
+
         addView(message);
 
         paint = new Paint();
@@ -78,7 +80,7 @@ public class MyView extends RelativeLayout {
     }
 
     public void onDraw(Canvas canvas) {
-        canvas.drawCircle(width-100,(height-170)/2,50,paint);
+        canvas.drawCircle(center.x,center.y,50,paint);
 
 
     }
