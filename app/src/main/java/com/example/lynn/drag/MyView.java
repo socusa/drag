@@ -20,7 +20,7 @@ public class MyView extends RelativeLayout {
 
         button.setTextSize(20);
 
-        button.setOnTouchListener(listener);
+     //   button.setOnTouchListener(listener);
 
         button.setOnClickListener(listener);
 
