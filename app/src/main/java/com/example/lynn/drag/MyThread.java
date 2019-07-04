@@ -6,7 +6,15 @@ public class MyThread implements Runnable {
     private Thread thread;
     private boolean keepGoing;
 
-    public MyThread() {
+    private void pause(double seconds) {
+        try {
+            Thread.sleep((int)(seconds*1000));
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+    }
+
+    public void start() {
         thread = new Thread(this);
 
         keepGoing = true;
@@ -14,12 +22,12 @@ public class MyThread implements Runnable {
         thread.start();
     }
 
-    private void pause(double seconds) {
-        try {
-            Thread.sleep((int)(seconds*1000));
-        } catch (InterruptedException e) {
-            System.out.println(e);
-        }
+    public void stop() {
+        keepGoing = true;
+    }
+
+    public boolean getKeepGoing() {
+        return(keepGoing);
     }
 
     @Override

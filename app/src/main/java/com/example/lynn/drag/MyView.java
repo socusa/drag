@@ -22,6 +22,8 @@ public class MyView extends RelativeLayout {
 
         button.setOnTouchListener(listener);
 
+        button.setOnClickListener(listener);
+
         addView(button);
 
         message = new TextView(context);
@@ -49,6 +51,8 @@ public class MyView extends RelativeLayout {
         paint.setColor(0xFF000000);
 
         setWillNotDraw(false);
+
+        myThread = new MyThread();
 
         /*
 

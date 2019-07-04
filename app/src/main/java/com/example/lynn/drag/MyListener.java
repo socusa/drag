@@ -5,12 +5,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
-import static com.example.lynn.drag.MainActivity.button;
-import static com.example.lynn.drag.MainActivity.height;
-import static com.example.lynn.drag.MainActivity.message;
-import static com.example.lynn.drag.MainActivity.width;
+import static com.example.lynn.drag.MainActivity.*;
 
-public class MyListener implements View.OnTouchListener {
+public class MyListener implements View.OnTouchListener,View.OnClickListener {
     private float offsetX;
     private float offsetY;
 
@@ -35,5 +32,13 @@ public class MyListener implements View.OnTouchListener {
         }
 
         return (true);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (!myThread.getKeepGoing())
+            myThread.start();
+        else
+            myThread.stop();
     }
 }
