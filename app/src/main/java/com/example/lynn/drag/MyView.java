@@ -56,7 +56,7 @@ public class MyView extends RelativeLayout {
 
         RelativeLayout layout1 = new RelativeLayout(context);
 
-        layoutParams = new LayoutParams(100,400);
+        layoutParams = new LayoutParams(50,400);
 
         layoutParams.leftMargin = 0;
         layoutParams.topMargin = 0;
@@ -69,9 +69,9 @@ public class MyView extends RelativeLayout {
 
         RelativeLayout layout2 = new RelativeLayout(context);
 
-        layoutParams = new LayoutParams(100,400);
+        layoutParams = new LayoutParams(50,400);
 
-        layoutParams.leftMargin = width-100;
+        layoutParams.leftMargin = width-50;
         layoutParams.topMargin = 0;
 
         layout2.setLayoutParams(layoutParams);
