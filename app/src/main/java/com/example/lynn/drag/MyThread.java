@@ -36,7 +36,7 @@ public class MyThread implements Runnable {
             int distancex = 0;
             int distancey = 0;
 
-            if (center.x < 50) {
+            if (center.y < 50) {
                 left = false;
                 up = false;
             }
