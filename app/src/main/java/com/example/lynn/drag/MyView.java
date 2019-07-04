@@ -1,6 +1,8 @@
 package com.example.lynn.drag;
 
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.Point;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import static com.example.lynn.drag.MainActivity.*;
 
 public class MyView extends RelativeLayout {
+    private Paint paint;
 
     public MyView(Context context) {
         super(context);
@@ -39,6 +42,14 @@ public class MyView extends RelativeLayout {
 
         addView(message);
 
+        paint = new Paint();
+
+        paint.setColor(0xFF000000);
+
+        setWillNotDraw(false);
+
+        /*
+
         RelativeLayout layout1 = new RelativeLayout(context);
 
         layoutParams = new LayoutParams(width,2*(height-170)/3);
@@ -62,6 +73,16 @@ public class MyView extends RelativeLayout {
         layout2.setBackgroundColor(0xFF00008F);
 
         addView(layout2);
+
+        */
     }
+
+    public void onDraw(Canvas canvas) {
+        canvas.drawCircle(width-100,(height-170)/2,50,paint);
+
+
+    }
+
+
 
 }
