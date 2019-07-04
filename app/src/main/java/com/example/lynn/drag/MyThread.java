@@ -37,7 +37,15 @@ public class MyThread implements Runnable {
                 center.x -= 10;
                 center.y -= 10;
 
-                myView.invalidate();
+                myView.post(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        myView.invalidate();
+                    }
+
+                });
+
 
             }
 
